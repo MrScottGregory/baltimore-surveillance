@@ -1,0 +1,141 @@
+body {
+    background: white;
+    padding: 80px;
+    }
+
+.navbar {
+    background: #FFD700 ;
+    }
+
+.navbar-light .navbar-brand {
+    font-family: Verdana;
+    color: #696969;
+    font-weight: bold;
+    background: #FFD700;
+    padding: 10px;
+    }
+
+h1 { 
+    font-family: Verdana;
+    color: Black;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    }
+
+h2 { 
+    font-family: Verdana;
+    color:  #800080;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    }
+
+h3 { 
+    font-family: Verdana;
+    color:  #800080;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align: center;
+    }
+
+h4 { 
+    font-family: Verdana;
+    color:  black;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align: center;
+    }
+
+h6 { 
+    font-family: Verdana;
+    color:  grey;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    font-weight: bold;
+    text-align: center;
+    }
+
+.border-1 {
+    border-width:3px !important;
+    border-color:  #800080 !important;
+    }
+
+.text-secondary {
+    font-family: Verdana;
+    color:  grey;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+    }
+
+.text-hypothesis {
+    font-family: Verdana;
+    color:  purple;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    }
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #696969;
+    color: white;
+    text-align: center;
+    border-top-style: solid;
+    border-top-color: #FFD700;
+    }
+
+.table thead>tr>th {
+    border-top: 0px;
+    }
+
+#comp_plot {
+    border-bottom: 0px solid #C0C0C0;
+    }
+
+/* styling for bubble pit chart  */
+
+.chart--container {
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+    }
+      
+.zc-ref {
+    display: none;
+    }
+
+#myChart {
+    height: 100%;
+    width: 100%;
+}
+
+   
+
+@media (max-width: 760px) {
+    #nav {
+        background: #FFD700;
+    } 
+    #comp_plot{
+        border-bottom: 1px solid #DCDCDC;
+    } 
+    }

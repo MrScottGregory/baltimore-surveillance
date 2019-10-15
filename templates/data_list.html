@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Baltimore CCTV</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/SGstyles.css">
+  <link rel="stylesheet" href="/static/css/d3Style.css">
+
+</head>
+<body>
+
+<!-- NAV BAR -->  
+
+<nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-light pl-5 pt-0 pb-0">
+        <a class="navbar-brand"  href="{{ url_for('index') }}">Baltimore Crime Surveillance</a>
+      
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown" >
+          <ul class="navbar-nav">
+      
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Visualizations
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{{ url_for('viz_map') }}">Crime Heatmap</a>
+                  <a class="dropdown-item" href="{{ url_for('viz_tree') }}">Neighborhood Crime Pies</a>
+                  <a class="dropdown-item" href="{{ url_for('viz_bubble') }}">Demographic Bubble Chart</a>
+              </div>
+            </li>     
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('conclusion') }}">Conclusions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('data_list') }}">Data</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+<!-- CONCLUSION BODY TEXT -->  
+
+<div class="row">
+    <div class="col-sm-12">
+      <div class="container mt-4 mb-5 pt-5 pb-5 bg-white">
+        <h2 align="center">Links to Data Sources</h2>
+        <hr>
+  
+        <div class="row single-post mt-5 no-gutters">
+          <div class="col-sm-12">
+            <p class="text-secondary">
+              <a class="data-link" style="font-weight:bold; color:purple;" href="https://data.baltimorecity.gov/Public-Safety/CCTV-Locations/h32e-c3r6" target="_blank">Baltimore CCTV Dataset</a>
+            <br>
+            Offered by Open Baltimore, this dataset provides locations of closed circuit cameras throughout the city capturing activity within 256ft (~2 blocks). Allows export to CSV and GeoJSON formats. Last updated February 2019.
+            <br>
+            <br>
+            <a class="data-link" style="font-weight:bold; color:purple;" href="https://data.baltimorecity.gov/Public-Safety/BPD-Part-1-Victim-Based-Crime-Data/wsfq-mvij/data" target="_blank">BPD Victim-Based Crime Dataset</a>
+            <br>
+            Offered by Open Baltimore, this dataset is a record from the Baltimore Police Department of all victim-reported crime incidents in the city. Allows export to various formats, including CSV and JSON. The data dates back to 1968 and is updated weekly.  
+            <br>
+            <br>
+            <a class="data-link" style="font-weight:bold; color:purple;" href="https://www.census.gov/programs-surveys/acs" target="_blank">US Census Dataset</a>
+            <br>
+            The American Community Survey is an annual record of a deep library of demographic information compiled by the US Census Bureau. The data can be accessed through the Census API. For this project we pulled the most recent data available, 2017. Specifically, we utilized the 2017 Five-Year Estimates Dataset, which affords zip-code level filtering.  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+  <!-- IMAGE JUMBOTRON -->  
+
+
+<footer>&copy; Columbia University Data Analytics Bootcamp - Scott Gregory - 2019</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+<script type="text/javascript" src="/static/js/app_bubble.js"></script>
+
+
+</body>

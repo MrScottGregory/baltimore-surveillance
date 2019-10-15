@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baltimore CCTV</title>
+  <script type="text/javascript" src="/static/js/config.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/SGstyles.css">
+  <link rel="stylesheet" href="/static/css/d3Style.css">
+
+ 
+
+  <!-- EXTRA STYLING FOR PARALLAX -->  
+
+  <style>
+    body, html {
+      height: 100%;
+    }
+      
+    .parallax {
+      background-image: url('static/images/baltimore_skyline.png');
+      height: 100%; 
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- NAV BAR -->  
+
+  <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-light pl-5 pt-0 pb-0">
+  <a class="navbar-brand"  href="{{ url_for('index') }}">Baltimore Crime Surveillance</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown" >
+    <ul class="navbar-nav">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Visualizations
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="{{ url_for('viz_map') }}">Crime Heatmap</a>
+            <a class="dropdown-item" href="{{ url_for('viz_tree') }}">Neighborhood Crime Pies</a>
+            <a class="dropdown-item" href="{{ url_for('viz_bubble') }}">Demographic Bubble Chart</a>
+        </div>
+      </li>     
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('conclusion') }}">Conclusions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('data_list') }}">Data</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- INTRO TEXT -->  
+
+<div class="parallax"></div>
+    
+<div style="height:700px;background-color:white;font-size:36px">
+    <h2 align="center" class= "pt-5">Focus On: Closed-Circuit Television Cameras</h2>
+    <hr>
+
+    <div class="row single-post mt-5 no-gutters">
+      <div class="col-sm-12">
+        <p class="text-secondary">
+        Increasingly, municipal police departments are relying on CCTV camera technology to deter crime and make arrests. Based on the reported success of such approaches, new contractors are now testing air-based surveillance systems originally designed by the Air Force for use in war zones.
+        <br>
+        <br>
+        Among large US cities, Baltimore has the highest per-capita murder rate for a large city in the U.S. For over a decade, the city has been using CCTV technology to fight crime. The program, designed to save government resources, relies on a system of over 700 privately-owned cameras that have been registered with the city for public safety use. 
+        <br>
+        <br>
+        Given this volunteer approach, we are interested in the geographic distribution of these cameras, the volume and types of crime in those areas, and the demographics most likely to be surveilled. 
+      </p>
+      <hr>
+      <p class="text-hypothesis">
+      It is our hypothesis that, given the lack of a centrally-managed deployment strategy, there is no clear relationship between crime and the presence of CCTV cameras in any given area.  We further hypothesize that poor and minority communities are more likely to be surveilled.  
+      </p>
+      </div>
+    </div>
+</div>
+
+<div class="parallax"></div>
+
+<script type="text/javascript" src="/static/js/config.js"></script>
+
+</body>
+</html>
+
+
+
+
+<!-- IMAGE JUMBOTRON   -->
+
+<!-- <div class="jumbotron jumbotron-fluid">
+    <img src="static/images/baltimore_skyline.png"alt="" class="img-fluid">
+  </div> -->
+
+<!-- INTRO BODY TEXT -->  
+
+<!-- <div class="row">
+  <div class="col-md-12 col-sm-12">
+    <div class="container mt-5 ml-1 mr-5 mb-5 pt-5 pl-5 pr-5 pb-5 bg-white">
+      <h2 align="center">Focus On: Closed-Circuit Television Cameras</h2>
+      <hr>
+
+      <div class="row single-post mt-5 no-gutters">
+        <div class="col-sm-12">
+          <p class="text-secondary">
+          Increasingly, municipal police departments are relying on CCTV camera technology to deter crime and make arrests. Based on the reported success of such approaches, new contractors are now testing air-based surveillance systems originally designed by the Air Force for use in war zones.
+          <br>
+          <br>
+          Among large US cities, Baltimore has the highest per-capita murder rate for a large city in the U.S. For over a decade, the city has been using CCTV technology to fight crime. The program, designed to save government resources, relies on a system of over 700 privately-owned cameras that have been registered with the city for public safety use. 
+          <br>
+          <br>
+          Given this volunteer approach, we are interested in the geographic distribution of these cameras, the volume and types of crime in those areas, and the demographics most likely to be surveilled. </p>
+        </div>
+      </div> -->
+
+    <!-- </div>
+  </div>
+</div> -->
+
+
+
+
+<footer>&copy; Columbia University Data Analytics Bootcamp - Scott Gregory - 2019</footer>
+
+</body>
