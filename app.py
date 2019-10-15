@@ -74,7 +74,7 @@ def person ():
     return df.to_json(orient='records')
 
 @app.route("/propmap")
-def property ():
+def prop ():
     df = pd.read_csv("db/balt_property.csv")
     return df.to_json(orient='records')
 
