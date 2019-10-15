@@ -99,11 +99,16 @@ def viz_bubble():
     return render_template("visualizations_bubble.html")
 
 @app.route("/bubble")
-# create function to call in db and jsonify the data
 def census():
-    df = pd.read_sql("SELECT * FROM bpd_cctv_census", conn)
-    output_json = df.to_json(orient='records')
-    return output_json
+    df = pd.read_csv("db/bpd_cctv_census.csv")
+    return df.to_json(orient='records')
+
+# @app.route("/bubble")
+# # create function to call in db and jsonify the data
+# def census():
+#     df = pd.read_sql("SELECT * FROM bpd_cctv_census", conn)
+#     output_json = df.to_json(orient='records')
+#     return output_json
 
 
 @app.route("/conclusion")
