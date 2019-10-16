@@ -3,14 +3,14 @@ import os
 import pandas as pd
 import numpy as np
 
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker 
-from sqlalchemy import create_engine, inspect
+# import sqlalchemy
+# from sqlalchemy.ext.automap import automap_base
+# from sqlalchemy.ext.declarative import declarative_base
+# from sqlalchemy.orm import sessionmaker 
+# from sqlalchemy import create_engine, inspect
 # from sqlalchemy_utils import get_tables, database_exists
 from flask import Flask, jsonify, render_template, url_for
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 
 
 
@@ -20,12 +20,12 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-DB_URL = "postgresql://postgres:chumwater@localhost/baltimore_cctv_db"
+# DB_URL = "postgresql://postgres:chumwater@localhost/baltimore_cctv_db"
 # app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:chumwater@localhost/baltimore_cctv_db"
 # db = SQLAlchemy(app)
 
-engine = create_engine(DB_URL)
-conn = engine.connect()
+# engine = create_engine(DB_URL)
+# conn = engine.connect()
 
 # engine = create_engine("postgresql://postgres:chumwater@localhost/baltimore_cctv_db")
 # inspector = inspect(engine)
