@@ -120,7 +120,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
 // ---------------------------------------------------------
 
 // read json that we output to our bubble route
-d3.json("http://127.0.0.1:5000/bubble")
+d3.json("/bubble")
   .then(function(zipsData) {
     
     // parse data and cast as numbers
