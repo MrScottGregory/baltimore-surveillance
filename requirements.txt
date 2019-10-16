@@ -1,5 +1,7 @@
 alabaster==0.7.12
 anaconda==0.0.1.1
+anaconda-client==1.7.2
+anaconda-project==0.8.3
 appnope==0.1.0
 appscript==1.0.1
 asn1crypto==1.0.1
@@ -24,6 +26,7 @@ chardet==3.0.4
 Click==7.0
 client==0.0.1
 cloudpickle==1.2.2
+clyent==1.2.2
 colorama==0.4.1
 contextlib2==0.6.0
 cryptography==2.7
@@ -87,6 +90,9 @@ MarkupSafe==1.1.1
 matplotlib==3.1.1
 mccabe==0.6.1
 mistune==0.8.4
+mkl-fft==1.0.14
+mkl-random==1.1.0
+mkl-service==2.3.0
 mock==3.0.5
 more-itertools==7.2.0
 mpmath==1.1.0
@@ -200,6 +206,7 @@ wrapt==1.11.2
 wurlitzer==1.0.3
 xlrd==1.2.0
 XlsxWriter==1.2.1
+xlwings==0.15.10
 xlwt==1.2.0
 zict==1.0.0
 zipp==0.6.0
