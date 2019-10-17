@@ -3,6 +3,7 @@ import os
 import pandas as pd
 import numpy as np
 
+
 # import sqlalchemy
 # from sqlalchemy.ext.automap import automap_base
 # from sqlalchemy.ext.declarative import declarative_base
@@ -12,8 +13,8 @@ import numpy as np
 from flask import Flask, jsonify, render_template, url_for
 # from flask_sqlalchemy import SQLAlchemy
 
-
-
+MAPBOX_PASS= os.environ.get('MAPBOX')
+print(MAPBOX_PASS)
 app = Flask(__name__)
 
 
